@@ -16,10 +16,10 @@ const Moviedetails = () => {
   
   return (
     <div className='h-screen relative w-full'>
-      <div className="cover  h-[200px] md:h-[400px]  w-[80%] mx-auto">
+      <div className="cover  h-[200px] md:h-[400px]  w-[95%] md:w-[80%] mx-auto">
       <img className='h-[100%] w-[100%] object-cover' src={` https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="" />
       </div>
-      <div className="cover-ovelay flex justify-center gap-5 absolute bottom-60 md:bottom-12">
+      <div className="cover-ovelay flex justify-center gap-5 absolute bottom-12 md:bottom-12">
         <div className="poster w-[100px] h-[100px] md:w-[200px] md:h-[200px]">
           <img src={` https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="" />
         </div>
