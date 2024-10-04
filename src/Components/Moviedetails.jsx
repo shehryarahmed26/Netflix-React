@@ -6,6 +6,7 @@ const Moviedetails = () => {
   const [movie, setmovie] = useState('')
   const {genres } = movie
   useEffect(() => {
+    window.scrollTo(0, 0)
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=6bee6063439c1600f798008465dfec60&language=en-US&page=5`)
     .then((response) => response.json())
     .then((response) => setmovie(response))
