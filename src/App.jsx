@@ -7,12 +7,12 @@ import Moviedetails from './Components/Moviedetails'
 
 const App = () => {
   return (
-    <div className='bg-black w-full h-screen'>
+    <div className='bg-black w-full'>
     <BrowserRouter>
     <Header/>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
-      <Route path='Movies/:type' element={<Movielist/>}></Route>
+      <Route path='/Movies/:type' element={<Movielist/>}></Route>
       <Route path='/Movie/:id' element={<Moviedetails/>}></Route>
       <Route path='/' element={<Home/>}></Route>
     </Routes>

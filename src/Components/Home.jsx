@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import './Home.css'
+import MovieCard from "./MovieCard";
 const Home = () => {
   const [movies, setmovies] = useState([]);
   useEffect(() => {
@@ -25,19 +26,27 @@ const Home = () => {
     >
         {
             movies.map((movie) => (
-                <div className="h-[330px]">
+                <div className="h-[500px]">
                     <div>
                     <img className="poster" src={` https://image.tmdb.org/t/p/original/${movie && movie.backdrop_path}`} alt="" />
                     </div>
-                    <div className="overlay text-white absolute bottom-14 p-8">
-                        <h2 className="text-3xl max-w-[300px] text-left font-bold">{movie.title}</h2>
-                        <p className="text-left">{movie.release_date}</p>
-                        <p className="w-[500px] text-left text-xs">{movie.overview}</p>
+                    <div className="overlay text-white absolute bottom-20 p-8">
+                        <h2 className="text-6xl max-w-[700px] text-left font-bold mt-2">{movie.title}</h2>
+                        <p className="text-left mt-2">{movie.release_date}</p>
+                        <p className="w-[500px] text-left text-sm mt-2">{movie.overview}</p>
                     </div>
                 </div>
             ))
         }
     </Carousel>
+        <h2 className="text-white text-2xl py-8 pl-4">Popular Movies</h2>
+        <div className="movies flex flex-wrap justify-center gap-5">
+        {
+          movies.map((movie) => (
+            <MovieCard movie={movie}/>
+          ))
+        }
+        </div>
     </div>
   );
 };
