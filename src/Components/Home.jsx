@@ -26,11 +26,11 @@ const Home = () => {
     >
         {
             movies.map((movie) => (
-                <div className="h-[500px]">
+                <div className="h-[430px]">
                     <div>
                     <img className="poster" src={` https://image.tmdb.org/t/p/original/${movie && movie.backdrop_path}`} alt="" />
                     </div>
-                    <div className="overlay text-white absolute bottom-20 p-8">
+                    <div className="overlay text-white absolute bottom-0 p-8">
                         <h2 className="text-6xl max-w-[700px] text-left font-bold mt-2">{movie.title}</h2>
                         <p className="text-left mt-2">{movie.release_date}</p>
                         <p className="w-[500px] text-left text-sm mt-2">{movie.overview}</p>
@@ -39,7 +39,7 @@ const Home = () => {
             ))
         }
     </Carousel>
-        <h2 className="text-white text-2xl py-8 pl-4">Popular Movies</h2>
+        <h2 className="text-white text-2xl py-8 p-6">Popular Movies</h2>
         <div className="movies flex flex-wrap justify-center gap-5">
         {
           movies.map((movie) => (

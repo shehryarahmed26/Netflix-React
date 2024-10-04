@@ -6,7 +6,7 @@ const MovieCard = ({movie}) => {
   console.log(movie);
   
   return (
-    <Link to={`/Movies/${movie.id}`}>
+    <Link to={`/Movie/${movie.id}`}>
     <div className='w-[200px] h-[300px] hover:scale-[1.2]  hover:shadow-lg hover:shadow-gray-800 transition-all hover:z-10'>
         <img src={` https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="" />
     </div></Link>

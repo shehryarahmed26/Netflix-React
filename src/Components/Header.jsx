@@ -3,18 +3,17 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav className='flex px-10 justify-between items-center py-1 text-white'>
-        
-        <Link to={'/'}><img src="/Images/netflix.png" className='w-28' alt="" /></Link>
+    <nav className='flex px-10 justify-between items-center text-white'>
+                <Link to={'/'}><img src="/Images/netflix.png" className='w-36 max-h-16' alt="" /></Link>
         <div className="links flex gap-5 text-sm items-center">
             <Link to='/Movies/popular'>
-            <p>Popular</p>
+            <p className='text-lg hover:text-red-600 transition-all'>Popular</p>
             </Link>
             <Link to='/Movies/top_rated'>
-            <p>Top Rated</p>
+            <p className='text-lg hover:text-red-600 transition-all'>Top Rated</p>
             </Link>
             <Link to='/Movies/upcoming'>
-            <p>Upcoming</p>
+            <p className='text-lg hover:text-red-600 transition-all'>Upcoming</p>
             </Link>
         </div>
     </nav>
