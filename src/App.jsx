@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import Home from './Components/Home'
 import Movielist from './Components/Movielist'
 import Moviedetails from './Components/Moviedetails'
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Route path='/Movies/:type' element={<Movielist/>}></Route>
       <Route path='/Movie/:id' element={<Moviedetails/>}></Route>
     </Routes>
+    <Footer/>
     </BrowserRouter>
     </div>
   )

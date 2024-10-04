@@ -30,9 +30,9 @@ const Moviedetails = () => {
           <p className='drop-shadow-xl'>Rating: {movie.vote_average}</p>
           <p className='drop-shadow-xl'>Duration: {movie.runtime}mins</p>
           <p className='drop-shadow-xl'>Release date: {movie.release_date}</p>
-          <div className='category flex gap-4'>
+          <div className='category flex gap-4 flex-wrap'>
             { genres ? genres.map((gen) => (
-              <p className='border rounded-xl px-4'>{gen.name}</p>
+              <p className='border rounded-xl px-4 text-xs md:text-sm'>{gen.name}</p>
             )) : ''}
             </div>
           <div className="description bg-black pt-3">
