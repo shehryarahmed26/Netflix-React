@@ -16,15 +16,15 @@ const Moviedetails = () => {
   
   return (
     <div className='h-screen relative w-full'>
-      <div className="cover  h-[400px] w-[80%] mx-auto">
+      <div className="cover  h-[200px] md:h-[400px]  w-[80%] mx-auto">
       <img className='h-[100%] w-[100%] object-cover' src={` https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="" />
       </div>
-      <div className="cover-ovelay flex justify-center gap-5 absolute bottom-12">
-        <div className="poster w-[200px] h-[200px]">
+      <div className="cover-ovelay flex justify-center gap-5 absolute bottom-60 md:bottom-12">
+        <div className="poster w-[100px] h-[100px] md:w-[200px] md:h-[200px]">
           <img src={` https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="" />
         </div>
         <div className="details text-white flex flex-col gap-2 max-w-[50%]">
-          <h2 className='text-3xl font-bold drop-shadow-xl'>{movie.title}</h2>
+          <h2 className='text-xl font-bold drop-shadow-xl'>{movie.title}</h2>
           <p className='drop-shadow-xl'>{movie.tagline}</p>
           <p className='drop-shadow-xl'>Rating: {movie.vote_average}</p>
           <p className='drop-shadow-xl'>Duration: {movie.runtime}mins</p>
@@ -36,7 +36,7 @@ const Moviedetails = () => {
             </div>
           <div className="description bg-black pt-3">
             <h3 className='text-2xl font-bold'>Overview</h3>
-            <p className='text-sm'>{movie.overview}</p>
+            <p className='text-xs md:text-sm'>{movie.overview}</p>
           </div>
         </div>
       </div>
