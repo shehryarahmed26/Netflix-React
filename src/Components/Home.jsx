@@ -3,6 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import './Home.css'
 import MovieCard from "./MovieCard";
+import { Link } from "react-router-dom";
 const Home = () => {
   const [movies, setmovies] = useState([]);
   useEffect(() => {
@@ -26,21 +27,22 @@ const Home = () => {
     >
         {
             movies.map((movie) => (
-                <div className="h-[430px]">
+               <Link to={`/movie/${movie.id}`}> <div className="h-[300px] md:h-[460px]">
                     <div>
                     <img className="poster" src={` https://image.tmdb.org/t/p/original/${movie && movie.backdrop_path}`} alt="" />
                     </div>
-                    <div className="overlay text-white absolute bottom-0 p-8">
-                        <h2 className="text-6xl max-w-[700px] text-left font-bold mt-2">{movie.title}</h2>
+                    <div className="overlay text-white absolute bottom-0 md:bottom-0 p-8">
+                        <h2 className="text-3xl md:text-6xl max-w-[700px] text-left font-bold mt-2">{movie.title}</h2>
                         <p className="text-left mt-2">{movie.release_date}</p>
-                        <p className="w-[500px] text-left text-sm mt-2">{movie.overview}</p>
+                        <p className="w-[500px] text-left text-xs md:text-sm mt-2">{movie.overview}</p>
                     </div>
                 </div>
+                </Link>
             ))
         }
     </Carousel>
         <h2 className="text-white text-2xl py-8 p-6">Popular Movies</h2>
-        <div className="movies flex flex-wrap justify-center gap-5">
+        <div className="movies flex flex-wrap justify-center gap-2 px-2">
         {
           movies.map((movie) => (
             <MovieCard movie={movie}/>

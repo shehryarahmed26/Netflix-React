@@ -7,7 +7,7 @@ import Moviedetails from './Components/Moviedetails'
 
 const App = () => {
   return (
-    <div className='bg-black w-full'>
+    <div className='bg-black w-full h-full'>
     <BrowserRouter>
     <Header/>
     <Routes>

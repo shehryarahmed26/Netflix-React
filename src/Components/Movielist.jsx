@@ -13,7 +13,7 @@ const Movielist = () => {
   }, [type])
   
   return (
-    <div className='flex flex-wrap px-5 mx-auto justify-center'>
+    <div className='flex flex-wrap px-2 gap-2 mx-auto justify-center'>
       {
         movies.map((movie) => (
           <MovieCard movie={movie}/>
