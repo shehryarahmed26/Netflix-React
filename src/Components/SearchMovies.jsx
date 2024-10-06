@@ -24,7 +24,7 @@ const SearchMovies = () => {
         
     }, [search])
     return (
-    <div className='flex flex-wrap min-h-screen justify-center'>
+    <div className='flex flex-wrap min-h-screen justify-center gap-2'>
       {
         movies.map((movie) => (
           loading ? 
