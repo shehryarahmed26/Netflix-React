@@ -11,7 +11,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 const Home = () => {
   const [loading, setloading] = useState(true)
   const [movies, setmovies] = useState([]);
-  const [page, setpage] = useState(2);
+  const [page, setpage] = useState(5);
   useEffect(() => {
     setloading(true)
     fetch(
